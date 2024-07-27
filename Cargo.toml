@@ -91,6 +91,10 @@ members = [
 ]
 resolver = "2"
 
+[patch.crates-io]
+cpufeatures = { path = "../utils/cpufeatures" }
+libp2p-tls = { path = "../rust-libp2p/transports/tls" }
+
 [workspace.package]
 edition = "2021"
 
@@ -146,7 +150,7 @@ rand = "0.8"
 rayon = "1.7"
 regex = "1"
 reqwest = { version = "0.11", default-features = false, features = ["blocking", "json", "stream", "rustls-tls", "native-tls-vendored"] }
-ring = "0.16"
+ring = "0.17.8"
 rpds = "0.11"
 rusqlite = { version = "0.28", features = ["bundled"] }
 serde = { version = "1", features = ["derive"] }
